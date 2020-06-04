@@ -11,7 +11,7 @@ ARG ANSIBLE_VERSION=2.9.9
 
 # Build container
 
-RUN /container/build.sh ${ANSIBLE_VERSION}
+RUN /container/build.sh
 
 # Volumes
 

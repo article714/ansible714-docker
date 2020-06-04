@@ -27,5 +27,7 @@ test_image:
   tags:
     - docker
   script:
-    # wait for bindns to be fully fit
-    - echo "TODO"
+    - ansible --version
+    - cd /home/ansible
+    - ansible-config view
+    - ansible -m ping all
