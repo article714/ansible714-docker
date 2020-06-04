@@ -29,7 +29,7 @@ apt-get install -y --no-install-recommends \
     python3-yaml
 
 # Install pip dependencies
-pip3 install ansible==$1
+pip3 install ansible==${ANSIBLE_VERSION}
 
 # ANSIBLE user should have a > 1000 gid to ease uid/gid mapping in docker
 addgroup --gid 6666 ansible
