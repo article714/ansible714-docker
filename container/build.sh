@@ -17,6 +17,7 @@ apt-get install -y --no-install-recommends \
     curl \
     dialog \
     git \
+    openssh-client \
     python-cryptography \
     python3-ecdsa \
     python3-jinja2 \
