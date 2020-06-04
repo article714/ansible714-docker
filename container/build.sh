@@ -1,6 +1,10 @@
 #!/bin/bash
 
-#set -x
+set -x
+
+echo $0
+
+echo $1
 
 apt-get update
 
@@ -32,7 +36,9 @@ addgroup --gid 6666 ansible
 adduser --system --home /home/ansible --gid 6666 --uid 6666 --quiet ansible
 
 # set /container/logs to belong to ansible user
+mkdir /container/logs
 chown -R ansible. /container/logs
+chmod -R 775 /container/logs
 
 # Clone ansible714 Tooling
 cd /home/ansible
