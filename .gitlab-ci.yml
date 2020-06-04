@@ -30,4 +30,4 @@ test_image:
     - ansible --version
     - cd /home/ansible
     - ansible-config view
-    - ansible -m ping all
+    - ansible -m ping localhost
