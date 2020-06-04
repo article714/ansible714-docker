@@ -16,6 +16,7 @@ apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     dialog \
+    git \
     python3-pip \
     python3-pyldap \
     python3-setuptools \
@@ -23,12 +24,22 @@ apt-get install -y --no-install-recommends \
     python3-wheel
 
 # Install pip dependencies
-pip3 install ansible==${ANSIBLE_VERSION}
+pip3 install ansible==$1
 
 # ANSIBLE user should have a > 1000 gid to ease uid/gid mapping in docker
 addgroup --gid 6666 ansible
 
 adduser --system --home /home/ansible --gid 6666 --uid 6666 --quiet ansible
+
+# set /container/logs to belong to ansible user
+chown -R ansible. /container/logs
+
+# Clone ansible714 Tooling
+cd /home/ansible
+sudo -u ansible git clone https://github.com/Article714/ansible714
+
+# install ansible 714 Dependencies
+pip3 install -r /home/ansible/ansible714/requirements.txt
 
 #--
 # Cleaning

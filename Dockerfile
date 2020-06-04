@@ -9,7 +9,12 @@ ENV PATH=/usr/local/bin:${PATH}
 
 # Build container
 
-RUN /container/build.sh
+RUN /container/build.sh ${ANSIBLE_VERSION}
+
+# Volumes
+
+VOLUME [ "/container/config" ]
+VOLUME [ "/container/logs" ]
 
 # Set default user when running the container
 
