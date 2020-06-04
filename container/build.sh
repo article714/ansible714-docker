@@ -6,6 +6,8 @@ echo $0
 
 echo $1
 
+echo ${ANSIBLE_VERSION}
+
 apt-get update
 
 # Generate French locales
