@@ -27,7 +27,8 @@ apt-get install -y --no-install-recommends \
     python3-setuptools \
     python3-watchdog \
     python3-wheel \
-    python3-yaml
+    python3-yaml \
+    sudo
 
 # Install pip dependencies
 pip3 install ansible==${ANSIBLE_VERSION}
