@@ -2,6 +2,11 @@
 
 # Ansible714 - Docker image
 
-![Docker Automated build](https://img.shields.io/docker/automated/article714/ansible714-docker)
+[![dockerhub-badge][dockerhub-badge]][dockerhub-link]
 
 A Docker Image for [Ansible](https://ansible.com) embeddig [Ansible714](https://github.com/article714/ansible714) tooling.
+
+
+[dockerhub-link]: https://hub.docker.com/r/article714/ansible714-docker 'Automated build on Docker Hub'
+
+[dockerhub-badge]: https://img.shields.io/docker/automated/article714/ansible714-docker 'Automated build on Docker Hub'
