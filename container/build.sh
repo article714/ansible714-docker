@@ -17,6 +17,7 @@ apt-get install -y --no-install-recommends \
     curl \
     dialog \
     git \
+    gnupg \
     openssh-client \
     python-cryptography \
     python3-ecdsa \
