@@ -30,6 +30,15 @@ apt-get install -y --no-install-recommends \
     python3-yaml \
     sudo
 
+# Install docker-cli
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian  buster  stable' >etc/apt/sources.list.d/docker.list
+
+apt-get update
+apt-get install docker-ce-cli
+
 # Install pip dependencies
 pip3 install ansible==${ANSIBLE_VERSION}
 
