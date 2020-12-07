@@ -16,6 +16,7 @@ apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     dialog \
+    gcc \
     git \
     gnupg \
     openssh-client \
@@ -69,6 +70,7 @@ pip3 install -r /home/ansible/ansible714/requirements.txt
 #--
 # Cleaning
 
+apt-get purge gcc
 apt-get -yq clean
 apt-get -yq autoremove
 rm -rf /var/lib/apt/lists/*
