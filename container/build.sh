@@ -22,6 +22,7 @@ apt-get install -y --no-install-recommends \
     openssh-client \
     python-cryptography \
     python3-ecdsa \
+    python3-dev \
     python3-jinja2 \
     python3-packaging \
     python3-pip \
@@ -70,7 +71,7 @@ pip3 install -r /home/ansible/ansible714/requirements.txt
 #--
 # Cleaning
 
-apt-get purge gcc
+apt-get purge gcc python3-dev
 apt-get -yq clean
 apt-get -yq autoremove
 rm -rf /var/lib/apt/lists/*
