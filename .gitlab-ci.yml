@@ -4,7 +4,7 @@ stages:
   - publish_images
 
 variables:
-  ANSIBLE714_DOCKER_VERSION: "0.0.1"
+  ANSIBLE714_DOCKER_VERSION: "0.0.2"
   ANSIBLE_VERSION: "2.9.9"
 
 #-----------------------------------------

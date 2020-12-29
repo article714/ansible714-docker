@@ -6,6 +6,7 @@ apt-get update
 
 # Generate French locales
 localedef -i fr_FR -c -f UTF-8 -A /usr/share/locale/locale.alias fr_FR.UTF-8
+localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
 export LANG=en_US.utf8
 
@@ -19,6 +20,8 @@ apt-get install -y --no-install-recommends \
     gcc \
     git \
     gnupg \
+    inetutils-ping \
+    iproute2 \
     openssh-client \
     python-cryptography \
     python3-ecdsa \
@@ -62,7 +65,7 @@ chmod -R 775 /container/logs
 cd /home/ansible
 sudo -u ansible mkdir -p foreign
 sudo -u ansible mkdir -p playbooks
-sudo -u ansible git clone https://github.com/Article714/ansible714
+sudo -u ansible git clone https://gitlab.com/article714/ansible714.git
 sudo -u ansible /home/ansible/ansible714/scripts/init_all_roles.sh NO_A714_CLONE
 
 # install ansible 714 Dependencies
