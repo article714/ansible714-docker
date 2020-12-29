@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -x
+set -x
 
 apt-get update
 
@@ -66,7 +66,9 @@ cd /home/ansible
 sudo -u ansible mkdir -p foreign
 sudo -u ansible mkdir -p playbooks
 sudo -u ansible git clone https://gitlab.com/article714/ansible714.git
-sudo -u ansible /home/ansible/ansible714/scripts/init_all_roles.sh NO_A714_CLONE
+cd ansible714
+sudo -u ansible /home/ansible/ansible714/scripts/init_dependencies.sh /home/ansible
+cd /
 
 # install ansible 714 Dependencies
 pip3 install -r /home/ansible/ansible714/requirements.txt
