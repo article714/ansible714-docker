@@ -46,7 +46,7 @@ apt-get update
 apt-get install docker-ce-cli
 
 # Install pip dependencies
-pip3 install --upgrate pip
+pip3 install --upgrade pip
 pip3 install --upgrade cryptography
 pip3 install ansible==${ANSIBLE_VERSION}
 
