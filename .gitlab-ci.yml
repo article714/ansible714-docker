@@ -74,4 +74,4 @@ publish_latest:
   variables:
     IMAGE_TAG: 'latest'
   rules:
-    - if: $CI_PIPELINE_SOURCE == 'pipeline' && $CI_COMMIT_BRANCH == 'master'
+    - if: $CI_PIPELINE_SOURCE == 'pipeline' && $PIPELINE_COMMIT_TAG == ''
