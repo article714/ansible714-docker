@@ -26,7 +26,7 @@ variables:
 build_image:
   extends: .build_image
   variables:
-    DOCKER_ADDTL_PARAMS: '--build-arg PYTHON_VERSION=${PYTHON_VERSION}'
+    DOCKER_ADDTL_PARAMS: '--build-arg PYTHON_VERSION=${PYTHON_VERSION} --build-arg DEBIAN_VERSION=${DEBIAN_VERSION}'
 
 #------------------------------------------
 # Tests
