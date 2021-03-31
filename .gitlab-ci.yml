@@ -5,8 +5,10 @@ include:
 
 stages:
   - build
-  - tests
-  - publish_images
+  - quality
+  - test
+  - security
+  - publish
 
 variables:
   IMAGE_NAME: ansible714-docker
