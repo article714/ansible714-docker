@@ -13,11 +13,6 @@ ENV PATH=/usr/local/bin:${PATH}
 
 RUN /container/build.sh
 
-# Volumes
-
-VOLUME [ "/container/config" ]
-VOLUME [ "/container/logs" ]
-
 # Set default user when running the container
 
 USER ansible
