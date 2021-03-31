@@ -21,43 +21,42 @@ variables:
 #***********************************************************************
 #
 # Images are only built and published when pipeline is triggered from ansible714 project
-#
 
 #-----------------------------------------
-# build_image:
-#   extends: .build_image
-#   variables:
-#     DOCKER_ADDTL_PARAMS: '--build-arg PYTHON_VERSION=${PYTHON_VERSION} --build-arg DEBIAN_VERSION=${DEBIAN_VERSION}'
-#
-# #------------------------------------------
-# # Tests
-#
-# test_config:
-#   extends: .test_image
-#   script:
-#     - python --version
-#     - ansible --version
-#     - cd /home/ansible
-#     - ansible-config view
-#
-# test_ping:
-#   extends: .test_image
-#   script:
-#     - cd /home/ansible
-#     - ansible -m ping localhost
-#
-# test_check_update:
-#   extends: .test_image
-#   script:
-#     - cd /home/ansible
-#     - ansible-playbook --check playbooks/update-software.yml
-#
-# test_dns:
-#   extends: .test_image
-#   script:
-#     - cd /home/ansible
-#     - ansible-playbook -i ansible714/tests/target.yml ansible714/tests/test_dns_loop.yml
-#
+build_image:
+  extends: .build_image
+  variables:
+    DOCKER_ADDTL_PARAMS: '--build-arg PYTHON_VERSION=${PYTHON_VERSION} --build-arg DEBIAN_VERSION=${DEBIAN_VERSION}'
+
+#------------------------------------------
+# Tests
+
+test_config:
+  extends: .test_image
+  script:
+    - python --version
+    - ansible --version
+    - cd /home/ansible
+    - ansible-config view
+
+test_ping:
+  extends: .test_image
+  script:
+    - cd /home/ansible
+    - ansible -m ping localhost
+
+test_check_update:
+  extends: .test_image
+  script:
+    - cd /home/ansible
+    - ansible-playbook --check playbooks/update-software.yml
+
+test_dns:
+  extends: .test_image
+  script:
+    - cd /home/ansible
+    - ansible-playbook -i ansible714/tests/target.yml ansible714/tests/test_dns_loop.yml
+
 #------------------------------------------
 # Publish images
 
