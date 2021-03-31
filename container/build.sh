@@ -23,17 +23,6 @@ apt-get install -y --no-install-recommends \
     inetutils-ping \
     iproute2 \
     openssh-client \
-    python-cryptography \
-    python3-ecdsa \
-    python3-dev \
-    python3-jinja2 \
-    python3-packaging \
-    python3-pip \
-    python3-pyldap \
-    python3-setuptools \
-    python3-watchdog \
-    python3-wheel \
-    python3-yaml \
     sudo
 
 # Install docker-cli
