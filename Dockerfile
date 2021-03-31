@@ -1,13 +1,11 @@
-FROM debian:buster-slim
-LABEL maintainer="Certificare C. Guychard<christophe@article714.org>"
+FROM python:${PYTHON_VERSION}-${DEBIAN_VERSION}
+LABEL maintainer="C. Guychard<christophe@article714.org>"
 
 # Container tooling
 
 COPY container /container
 
 ENV PATH=/usr/local/bin:${PATH}
-
-ARG ANSIBLE_VERSION=2.9.9
 
 # Build container
 

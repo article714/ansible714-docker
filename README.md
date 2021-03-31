@@ -1,12 +1,9 @@
-[![Build Status](https://travis-ci.com/article714/ansible714-docker.svg?branch=master)](https://travis-ci.com/article714/ansible714-docker)
-
-# Ansible714 - Docker image
+# Ansible714 - Image Docker
 
 [![dockerhub-badge][dockerhub-badge]][dockerhub-link]
 
-A Docker Image for [Ansible](https://ansible.com) embeddig [Ansible714](https://github.com/article714/ansible714) tooling.
+Une image Docker pour [Ansible](https://ansible.com) qui inclue l'outillage [Ansible714](https://gitlab.com/article714/ansible714).
 
+## Développement
 
-[dockerhub-link]: https://hub.docker.com/r/article714/ansible714-docker 'Automated build on Docker Hub'
-
-[dockerhub-badge]: https://img.shields.io/docker/automated/article714/ansible714-docker 'Automated build on Docker Hub'
+**La branche** _production_ **est désormais obsolète**

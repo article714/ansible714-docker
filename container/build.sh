@@ -48,7 +48,6 @@ apt-get install docker-ce-cli
 # Install pip dependencies
 pip3 install --upgrade pip
 pip3 install --upgrade cryptography
-pip3 install ansible==${ANSIBLE_VERSION}
 
 # ANSIBLE user should have a > 1000 gid to ease uid/gid mapping in docker
 addgroup --gid 6666 ansible
@@ -68,12 +67,13 @@ cd /home/ansible
 sudo -u ansible mkdir -p foreign
 sudo -u ansible mkdir -p playbooks
 sudo -u ansible git clone https://gitlab.com/article714/ansible714.git
-cd ansible714
-sudo -u ansible /home/ansible/ansible714/scripts/init_dependencies.sh /home/ansible
-cd /
 
 # install ansible 714 Dependencies
 pip3 install -r /home/ansible/ansible714/requirements.txt
+
+cd ansible714
+sudo -u ansible /home/ansible/ansible714/scripts/init_dependencies.sh /home/ansible
+cd /
 
 #--
 # Cleaning
